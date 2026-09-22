@@ -1,6 +1,6 @@
 - [x] Atualizar toda a copy da oferta para Redação e Produção Textual
 - [x] Incluir a seção “Como funciona”
 - [x] Validar conteúdo, preços, FAQ e visual em desktop e celular
-- [ ] Trocar o mockup principal pela imagem enviada
-- [ ] Adicionar novas imagens aos cinco materiais do kit
-- [ ] Validar as novas imagens no computador e celular
+- [x] Trocar o mockup principal pela imagem enviada
+- [x] Adicionar novas imagens aos cinco materiais do kit
+- [x] Validar as novas imagens no computador e celular
