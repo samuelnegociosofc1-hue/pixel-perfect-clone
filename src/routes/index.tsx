@@ -1,8 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Check, Clock3, FileText, GraduationCap, MonitorUp, PenLine, ShoppingCart, Sparkles, X } from "lucide-react";
-import kitImage from "../assets/kit-completo.jpg";
+import { ArrowRight, Check, Clock3, FileText, GraduationCap, ShoppingCart, X } from "lucide-react";
+import kitImageAsset from "../assets/kit-redacao-mockup.png.asset.json";
 import activityImage from "../assets/amostra-atividade.jpg";
 import mapImage from "../assets/amostra-mapa.jpg";
+import benefitActivities from "../assets/beneficio-atividades.jpg";
+import benefitSlides from "../assets/beneficio-slides.jpg";
+import benefitSpelling from "../assets/beneficio-ortografia.jpg";
+import benefitLanguage from "../assets/beneficio-linguistica.jpg";
+import benefitWriting from "../assets/beneficio-producao-textual.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -19,11 +24,11 @@ export const Route = createFileRoute("/")({
 });
 
 const benefits = [
-  [FileText, "+2.000 ATIVIDADES", "Atividades de Redação e Escrita", "Exercícios práticos para desenvolver escrita, interpretação, construção de textos, argumentação e organização das ideias."],
-  [MonitorUp, "SLIDES PRONTOS", "Slides de Aula", "Apresentações organizadas para facilitar suas explicações e tornar suas aulas mais dinâmicas e práticas."],
-  [Sparkles, "ORTOGRAFIA", "Aprendendo Português na Prática", "Materiais e atividades para trabalhar ortografia, acentuação, pontuação, construção de frases e uso correto da língua portuguesa."],
-  [GraduationCap, "LINGUÍSTICA", "Linguagem e Comunicação", "Conteúdos para trabalhar linguagem, variação linguística, comunicação, gêneros textuais e diferentes formas de utilização da língua."],
-  [PenLine, "PRODUÇÃO TEXTUAL", "Redação e Produção de Textos", "Propostas e atividades para desenvolver escrita, criatividade, argumentação, estrutura textual, coesão e coerência."],
+  [benefitActivities, "+2.000 ATIVIDADES", "Atividades de Redação e Escrita", "Exercícios práticos para desenvolver escrita, interpretação, construção de textos, argumentação e organização das ideias."],
+  [benefitSlides, "SLIDES PRONTOS", "Slides de Aula", "Apresentações organizadas para facilitar suas explicações e tornar suas aulas mais dinâmicas e práticas."],
+  [benefitSpelling, "ORTOGRAFIA", "Aprendendo Português na Prática", "Materiais e atividades para trabalhar ortografia, acentuação, pontuação, construção de frases e uso correto da língua portuguesa."],
+  [benefitLanguage, "LINGUÍSTICA", "Linguagem e Comunicação", "Conteúdos para trabalhar linguagem, variação linguística, comunicação, gêneros textuais e diferentes formas de utilização da língua."],
+  [benefitWriting, "PRODUÇÃO TEXTUAL", "Redação e Produção de Textos", "Propostas e atividades para desenvolver escrita, criatividade, argumentação, estrutura textual, coesão e coerência."],
 ] as const;
 
 const topics = [
@@ -60,7 +65,7 @@ function Index() {
           <h1 className="mt-5 max-w-[19ch] font-serif text-4xl leading-tight md:text-6xl">Sua próxima aula de redação já está <em className="marker">pronta.</em></h1>
           <p className="mt-5 max-w-3xl text-sm font-medium leading-relaxed text-paper/85 md:text-base">+2.000 atividades, exercícios, propostas de redação, slides, materiais práticos e recursos pedagógicos para ensinar redação, escrita, ortografia e comunicação de forma simples, prática e organizada.</p>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-paper/70">Do Ensino Fundamental ao Ensino Médio. Materiais pensados para professores que querem economizar horas de planejamento e ter conteúdo pronto para aplicar em sala de aula.</p>
-          <img src={kitImage} alt="Kit completo com cadernos, atividades e aula digital de Português" width={1200} height={800} className="mt-7 w-full max-w-3xl object-contain" />
+          <img src={kitImageAsset.url} alt="Kit completo de Redação e Produção Textual com cadernos, slides e atividades" width={1143} height={758} className="hero-mockup mt-7 w-full max-w-5xl object-contain" />
           <Cta>QUERO MEU KIT COMPLETO</Cta>
           <small className="mt-4 text-paper/60">Acesso imediato no seu e-mail • Pagamento único</small>
           <div className="mt-10 grid w-full max-w-4xl grid-cols-2 gap-3 md:grid-cols-4">
@@ -83,7 +88,7 @@ function Index() {
         <h2 className="mt-5">O que você vai receber:</h2>
         <p className="subcopy">Uma biblioteca completa de materiais para trabalhar redação, produção textual, ortografia, linguística, interpretação e comunicação, ajudando seus alunos a desenvolverem a escrita e utilizarem a língua portuguesa na prática.</p>
         <div className="mx-auto mt-10 grid max-w-5xl gap-5 md:grid-cols-3">
-          {benefits.map(([Icon, label, title, copy]) => <article className="benefit" key={title}><div className="benefit-icon"><Icon size={22}/></div><span>{label}</span><h3>{title}</h3><p>{copy}</p></article>)}
+          {benefits.map(([image, label, title, copy]) => <article className="benefit benefit-with-image" key={title}><img src={image} alt={`Material de ${title}`} loading="lazy" width={900} height={650}/><div className="benefit-copy"><span>{label}</span><h3>{title}</h3><p>{copy}</p></div></article>)}
         </div>
         <div className="mt-8 flex justify-center"><Cta>QUERO ACESSAR TODOS OS MATERIAIS</Cta></div>
       </section>
