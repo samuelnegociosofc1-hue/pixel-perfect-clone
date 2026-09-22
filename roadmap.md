@@ -1,0 +1,3 @@
+- [x] Atualizar toda a copy da oferta para Redação e Produção Textual
+- [x] Incluir a seção “Como funciona”
+- [x] Validar conteúdo, preços, FAQ e visual em desktop e celular
