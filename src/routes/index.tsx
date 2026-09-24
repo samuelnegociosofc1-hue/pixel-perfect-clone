@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
-import { ArrowRight, Check, Clock3, FileText, GraduationCap, ShoppingCart, X } from "lucide-react";
+import { ArrowRight, Check, FileText, GraduationCap, ShoppingCart, X } from "lucide-react";
 import kitImageAsset from "../assets/kit-redacao-mockup.png.asset.json";
 import activityImage from "../assets/amostra-atividade.jpg";
 import mapImage from "../assets/amostra-mapa.jpg";
@@ -66,17 +66,17 @@ function Index() {
   }, []);
   return (
     <main className="overflow-hidden bg-paper font-sans text-ink">
-      <div className="promo">⚡ A promoção encerra hoje (21 de setembro de 2026) <span>•</span> <Clock3 size={14} /> Condição especial por tempo limitado</div>
 
-      <section className="chalk-grid bg-chalk px-5 pb-16 pt-12 text-paper md:pt-16">
+
+      <section className="chalk-grid bg-chalk px-5 pb-16 pt-12 text-ink md:pt-16">
         <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
           <span className="stamp">EXCLUSIVO PARA PROFESSORES DE REDAÇÃO, PRODUÇÃO TEXTUAL E LÍNGUA PORTUGUESA</span>
           <h1 className="mt-5 max-w-[19ch] font-serif text-4xl leading-tight md:text-6xl">Sua próxima aula de redação já está <em className="marker">pronta.</em></h1>
-          <p className="mt-5 max-w-3xl text-sm font-medium leading-relaxed text-paper/85 md:text-base">+2.000 atividades, exercícios, propostas de redação, slides, materiais práticos e recursos pedagógicos para ensinar redação, escrita, ortografia e comunicação de forma simples, prática e organizada.</p>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-paper/70">Do Ensino Fundamental ao Ensino Médio. Materiais pensados para professores que querem economizar horas de planejamento e ter conteúdo pronto para aplicar em sala de aula.</p>
+          <p className="mt-5 max-w-3xl text-sm font-medium leading-relaxed text-ink/80 md:text-base">+2.000 atividades, exercícios, propostas de redação, slides, materiais práticos e recursos pedagógicos para ensinar redação, escrita, ortografia e comunicação de forma simples, prática e organizada.</p>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/70">Do Ensino Fundamental ao Ensino Médio. Materiais pensados para professores que querem economizar horas de planejamento e ter conteúdo pronto para aplicar em sala de aula.</p>
           <img src={kitImageAsset.url} alt="Kit completo de Redação e Produção Textual com cadernos, slides e atividades" width={1143} height={758} className="hero-mockup mt-7 w-full max-w-5xl object-contain" />
           <Cta>QUERO MEU KIT COMPLETO</Cta>
-          <small className="mt-4 text-paper/60">Acesso imediato no seu e-mail • Pagamento único</small>
+          <small className="mt-4 text-ink/60">Acesso imediato no seu e-mail • Pagamento único</small>
           <div className="mt-10 grid w-full max-w-4xl grid-cols-2 gap-3 md:grid-cols-4">
             {[['+2.000','ATIVIDADES E MATERIAIS'],['6º ao 9º ano','FUNDAMENTAL II'],['1º ao 3º ano','ENSINO MÉDIO'],['PRÁTICO','MATERIAIS PRONTOS PARA APLICAÇÃO']].map(([big,small]) => <div className="stat" key={big}><strong>{big}</strong><span>{small}</span></div>)}
           </div>
@@ -88,7 +88,7 @@ function Index() {
         <div className="mx-auto mt-10 grid max-w-4xl gap-4 text-left md:grid-cols-2">
           {["Passar horas procurando atividades de escrita e redação na internet", "Criar exercícios, propostas de redação e atividades do zero", "Gastar o final de semana preparando slides e materiais para suas aulas", "Improvisar quando surge uma aula ou quando você precisa de uma atividade rapidamente"].map(item => <div className="pain" key={item}><span><X size={15}/></span>{item}</div>)}
         </div>
-        <div className="chalkboard mx-auto mt-10 max-w-2xl">Agora você pode encontrar <b className="text-highlight">milhares de materiais organizados em um único lugar</b>, para facilitar sua rotina e recuperar seu tempo de planejamento.</div>
+        <div className="chalkboard mx-auto mt-10 max-w-2xl">Agora você pode encontrar <b className="text-rust">milhares de materiais organizados em um único lugar</b>, para facilitar sua rotina e recuperar seu tempo de planejamento.</div>
         <div className="mt-7 flex justify-center"><Cta>QUERO ECONOMIZAR HORAS DE PLANEJAMENTO</Cta></div>
       </section>
 
@@ -123,10 +123,10 @@ function Index() {
         <p className="mt-5 text-xs font-semibold">6º ao 9º ano — Fundamental II &nbsp; • &nbsp; 1º ao 3º ano — Ensino Médio</p>
       </section>
 
-      <section id="planos" className="chalk-grid section bg-chalk text-paper">
+      <section id="planos" className="chalk-grid section bg-chalk text-ink">
         <span className="stamp">INVESTIMENTO</span>
         <h2 className="mt-5">Suas aulas prontas <span className="text-rust">o ano inteiro</span></h2>
-        <p className="mt-4 text-sm text-paper/70">Acesso imediato após a compra. Pagamento único, sem mensalidades.</p>
+        <p className="mt-4 text-sm text-ink/70">Acesso imediato após a compra. Pagamento único, sem mensalidades.</p>
         <div className="mx-auto mt-10 grid max-w-3xl gap-6 text-left md:grid-cols-2 md:items-start">
           <Price title="PLANO BÁSICO" old="R$ 27,90" price="12,00" items={["100 atividades de escrita", "100 exercícios", "Propostas de redação", "Materiais de apoio", "Suporte por e-mail", "Acesso vitalício"]} />
           <Price featured title="KIT COMPLETO" old="R$ 67,90" price="25,90" items={["+2.000 atividades e exercícios", "Atividades de ortografia", "Materiais de linguística", "Produção textual", "Redação e argumentação", "Aprendendo Português na prática", "Slides prontos", "Propostas de redação", "Mapas mentais", "Atividades de interpretação", "Materiais do 6º ano ao Ensino Médio", "Conteúdos para revisão", "Materiais para aulas de emergência", "Atualizações", "Suporte prioritário", "Garantia de 7 dias", "Acesso vitalício"]} />
@@ -143,23 +143,23 @@ function Index() {
         </div>
       </section>
 
-      <section className="chalk-grid section bg-chalk text-center text-paper">
+      <section className="chalk-grid section bg-chalk text-center text-ink">
         <span className="stamp">QUEM JÁ USA APROVA</span>
         <h2 className="mt-5">O que professores estão <span className="text-rust">dizendo</span></h2>
         <blockquote className="testimonial"><div className="avatar">MS</div><div><b>Márcia Souza</b><small>Professora de Português</small></div><p>“Nunca vi um material organizado por bimestre desse jeito. Sou professora há 12 anos e isso realmente economizou muito do meu final de semana.”</p></blockquote>
       </section>
 
-      <section className="chalk-grid section bg-chalk text-paper">
+      <section className="chalk-grid section bg-chalk text-ink">
         <div className="mx-auto max-w-2xl text-center"><span className="stamp">PERGUNTAS FREQUENTES</span><h2 className="mt-5">Ainda tem dúvidas?</h2></div>
         <div className="mx-auto mt-10 max-w-2xl space-y-3">{faqs.map(([q,a],i) => <details className="faq" key={q} open={i===0}><summary>{q}<span>+</span></summary><p>{a}</p></details>)}</div>
       </section>
 
-      <section className="bg-chalk px-5 py-20 text-center text-paper"><h2 className="mx-auto max-w-3xl">Professor, tenha tudo o que precisa para suas aulas de <span className="text-rust">escrita</span> em um único lugar</h2><p className="subcopy !text-paper/70">Economize horas de planejamento com +2.000 atividades, exercícios, propostas de redação, slides, materiais de ortografia, linguística, interpretação e recursos para ensinar Português na prática.</p><div className="mt-8 flex justify-center"><Cta>QUERO MEU KIT COMPLETO AGORA</Cta></div><p className="mt-4 text-xs text-paper/60">◷ Pagamento único • Acesso vitalício • Garantia de 7 dias</p></section>
+      <section className="bg-chalk px-5 py-20 text-center text-ink"><h2 className="mx-auto max-w-3xl">Professor, tenha tudo o que precisa para suas aulas de <span className="text-rust">escrita</span> em um único lugar</h2><p className="subcopy !text-ink/70">Economize horas de planejamento com +2.000 atividades, exercícios, propostas de redação, slides, materiais de ortografia, linguística, interpretação e recursos para ensinar Português na prática.</p><div className="mt-8 flex justify-center"><Cta>QUERO MEU KIT COMPLETO AGORA</Cta></div><p className="mt-4 text-xs text-ink/60">◷ Pagamento único • Acesso vitalício • Garantia de 7 dias</p></section>
       <footer className="bg-footer px-5 py-8 text-center text-paper"><strong className="font-serif">Kit Completo de Redação e Produção Textual</strong><p className="mt-1 text-xs">© 2026 • Todos os direitos reservados.</p><p className="mt-2 text-[10px] text-paper/60">Este produto oferece recursos pedagógicos e não garante resultados específicos de aprendizagem.</p></footer>
     </main>
   );
 }
 
 function Price({title,old,price,items,featured=false}:{title:string;old:string;price:string;items:string[];featured?:boolean}) {
-  return <article className={`price ${featured ? 'price-featured' : ''}`}>{featured && <span className="popular">MAIS ESCOLHIDO</span>}<span className="price-title">{title}</span><s>de {old}</s><small>por apenas</small><div className="price-number"><sup>R$</sup>{price}</div><small>Pagamento único</small><ul>{items.map(item => <li key={item}><Check size={14}/>{item}</li>)}</ul><a href="#planos" className="cta w-full justify-center">QUERO O {featured ? 'KIT COMPLETO' : 'PLANO BÁSICO'}<ArrowRight size={16}/></a><small className="mt-4 text-center text-paper/55">Compra segura • Acesso por e-mail</small></article>
+  return <article className={`price ${featured ? 'price-featured' : ''}`}>{featured && <span className="popular">MAIS ESCOLHIDO</span>}<span className="price-title">{title}</span><s>de {old}</s><small>por apenas</small><div className="price-number"><sup>R$</sup>{price}</div><small>Pagamento único</small><ul>{items.map(item => <li key={item}><Check size={14}/>{item}</li>)}</ul><a href="#planos" className="cta w-full justify-center">QUERO O {featured ? 'KIT COMPLETO' : 'PLANO BÁSICO'}<ArrowRight size={16}/></a><small className="mt-4 text-center text-ink/55">Compra segura • Acesso por e-mail</small></article>
 }
