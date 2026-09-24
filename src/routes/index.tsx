@@ -76,7 +76,7 @@ function Index() {
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/70">Do Ensino Fundamental ao Ensino Médio. Materiais pensados para professores que querem economizar horas de planejamento e ter conteúdo pronto para aplicar em sala de aula.</p>
           <img src={kitImageAsset.url} alt="Kit completo de Redação e Produção Textual com cadernos, slides e atividades" width={1143} height={758} className="hero-mockup mt-7 w-full max-w-5xl object-contain" />
           <Cta>QUERO MEU KIT COMPLETO</Cta>
-          <small className="mt-4 text-paper/60">Acesso imediato no seu e-mail • Pagamento único</small>
+          <small className="mt-4 text-ink/60">Acesso imediato no seu e-mail • Pagamento único</small>
           <div className="mt-10 grid w-full max-w-4xl grid-cols-2 gap-3 md:grid-cols-4">
             {[['+2.000','ATIVIDADES E MATERIAIS'],['6º ao 9º ano','FUNDAMENTAL II'],['1º ao 3º ano','ENSINO MÉDIO'],['PRÁTICO','MATERIAIS PRONTOS PARA APLICAÇÃO']].map(([big,small]) => <div className="stat" key={big}><strong>{big}</strong><span>{small}</span></div>)}
           </div>
