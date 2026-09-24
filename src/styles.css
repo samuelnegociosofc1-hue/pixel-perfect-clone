@@ -81,7 +81,7 @@ h1,h2 { letter-spacing:-.015em; }
 .cta svg { transition:transform .2s; } .cta:hover svg { transform:translateX(4px); }
 @keyframes shine { 0%,60% { left:-60%; } 100% { left:130%; } }
 @keyframes ctaPulse { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-2px); } }
-.hero-mockup { animation:float 6s ease-in-out infinite; }
+.hero-mockup { animation:float 6s ease-in-out infinite; mix-blend-mode:multiply; }
 @keyframes float { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-10px); } }
 .stat { border-radius:14px; min-height:78px; transition:transform .25s; } .stat:hover { transform:translateY(-4px); } .stat::before { display:none; }
 .stat strong { color:var(--cta); font-size:1.3rem; }
