@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { ArrowRight, Check, Clock3, FileText, GraduationCap, ShoppingCart, X } from "lucide-react";
 import kitImageAsset from "../assets/kit-redacao-mockup.png.asset.json";
 import activityImage from "../assets/amostra-atividade.jpg";
@@ -55,6 +56,14 @@ function Cta({ children }: { children: React.ReactNode }) {
 }
 
 function Index() {
+  useEffect(() => {
+    const els = document.querySelectorAll("main section h2, main .stamp, main .subcopy, .stat, .pain, .chalkboard, .benefit, figure, .sample-label, .note, .price, .testimonial, .faq");
+    els.forEach((el, i) => { el.classList.add("reveal"); (el as HTMLElement).style.transitionDelay = `${(i % 4) * 80}ms`; });
+    document.documentElement.classList.add("js-reveal");
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0.12 });
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
   return (
     <main className="overflow-hidden bg-paper font-sans text-ink">
       <div className="promo">⚡ A promoção encerra hoje (21 de setembro de 2026) <span>•</span> <Clock3 size={14} /> Condição especial por tempo limitado</div>
