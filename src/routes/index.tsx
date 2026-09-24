@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
-import { ArrowRight, Check, Clock3, FileText, GraduationCap, ShoppingCart, X } from "lucide-react";
+import { ArrowRight, Check, FileText, GraduationCap, ShoppingCart, X } from "lucide-react";
 import kitImageAsset from "../assets/kit-redacao-mockup.png.asset.json";
 import activityImage from "../assets/amostra-atividade.jpg";
 import mapImage from "../assets/amostra-mapa.jpg";
@@ -66,14 +66,14 @@ function Index() {
   }, []);
   return (
     <main className="overflow-hidden bg-paper font-sans text-ink">
-      <div className="promo">⚡ A promoção encerra hoje (21 de setembro de 2026) <span>•</span> <Clock3 size={14} /> Condição especial por tempo limitado</div>
 
-      <section className="chalk-grid bg-chalk px-5 pb-16 pt-12 text-paper md:pt-16">
+
+      <section className="chalk-grid bg-chalk px-5 pb-16 pt-12 text-ink md:pt-16">
         <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
           <span className="stamp">EXCLUSIVO PARA PROFESSORES DE REDAÇÃO, PRODUÇÃO TEXTUAL E LÍNGUA PORTUGUESA</span>
           <h1 className="mt-5 max-w-[19ch] font-serif text-4xl leading-tight md:text-6xl">Sua próxima aula de redação já está <em className="marker">pronta.</em></h1>
-          <p className="mt-5 max-w-3xl text-sm font-medium leading-relaxed text-paper/85 md:text-base">+2.000 atividades, exercícios, propostas de redação, slides, materiais práticos e recursos pedagógicos para ensinar redação, escrita, ortografia e comunicação de forma simples, prática e organizada.</p>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-paper/70">Do Ensino Fundamental ao Ensino Médio. Materiais pensados para professores que querem economizar horas de planejamento e ter conteúdo pronto para aplicar em sala de aula.</p>
+          <p className="mt-5 max-w-3xl text-sm font-medium leading-relaxed text-ink/80 md:text-base">+2.000 atividades, exercícios, propostas de redação, slides, materiais práticos e recursos pedagógicos para ensinar redação, escrita, ortografia e comunicação de forma simples, prática e organizada.</p>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/70">Do Ensino Fundamental ao Ensino Médio. Materiais pensados para professores que querem economizar horas de planejamento e ter conteúdo pronto para aplicar em sala de aula.</p>
           <img src={kitImageAsset.url} alt="Kit completo de Redação e Produção Textual com cadernos, slides e atividades" width={1143} height={758} className="hero-mockup mt-7 w-full max-w-5xl object-contain" />
           <Cta>QUERO MEU KIT COMPLETO</Cta>
           <small className="mt-4 text-paper/60">Acesso imediato no seu e-mail • Pagamento único</small>

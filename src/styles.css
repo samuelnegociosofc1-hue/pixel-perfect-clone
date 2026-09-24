@@ -72,8 +72,6 @@ figure { position:relative; margin:0; } figure img { width:100%; max-height:620p
 /* ===== Editorial Prestige refinements ===== */
 body { font-family:"Nunito Sans",sans-serif; -webkit-font-smoothing:antialiased; }
 h1,h2 { letter-spacing:-.015em; }
-.promo { font-size:.8rem; letter-spacing:.02em; background:linear-gradient(90deg,var(--rust),color-mix(in oklab,var(--rust) 80%,black),var(--rust)); background-size:200% 100%; animation:promoShift 6s linear infinite; position:sticky; top:0; z-index:50; }
-@keyframes promoShift { to { background-position:200% 0; } }
 .chalk-grid { position:relative; }
 .chalk-grid::after { content:""; position:absolute; inset:0; pointer-events:none; background:radial-gradient(60% 45% at 50% 0%,color-mix(in oklab,var(--highlight) 10%,transparent),transparent 70%); }
 .chalk-grid > * { position:relative; z-index:1; }
@@ -99,14 +97,14 @@ figure img { border-radius:14px; } figcaption { border-radius:999px; font-family
 .sample-label { border-radius:12px; font-family:"Nunito Sans",sans-serif; font-weight:800; }
 .note { border-radius:6px; transition:transform .3s; } .note:hover { transform:rotate(0) scale(1.02); }
 .note ul { font-size:.88rem; }
-.price { border-radius:20px; background:color-mix(in oklab,var(--paper) 6%,transparent); backdrop-filter:blur(4px); transition:transform .3s; }
+.price { border-radius:20px; background:color-mix(in oklab,white 80%,transparent); backdrop-filter:blur(4px); transition:transform .3s; }
 .price-featured { border-width:2px; box-shadow:0 0 0 6px color-mix(in oklab,var(--rust) 15%,transparent),0 30px 60px color-mix(in oklab,black 35%,transparent); }
 @media (min-width:768px){ .price-featured { transform:scale(1.04); } }
 .popular { border-radius:999px; font-family:"Nunito Sans",sans-serif; font-weight:800; }
 .price-title { font-family:"Nunito Sans",sans-serif; font-weight:800; }
 .price li { font-size:.84rem; }
 .testimonial { border-radius:18px; max-width:460px; } .testimonial p { font-size:.95rem; font-family:"Lora",serif; font-style:italic; }
-.faq { border-radius:12px; transition:background .2s; } .faq:hover { background:color-mix(in oklab,var(--paper) 9%,transparent); }
+.faq { border-radius:12px; transition:background .2s; } .faq:hover { background:color-mix(in oklab,white 85%,transparent); }
 .faq summary { font-size:.95rem; } .faq p { font-size:.88rem; }
 .subcopy { font-size:1rem; }
 /* scroll reveal (only when JS active) */
