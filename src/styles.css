@@ -20,11 +20,11 @@
 }
 
 :root {
-  --background: oklch(0.955 0.018 87);
+  --background: oklch(1 0 0);
   --foreground: oklch(0.30 0.08 250);
-  --paper: oklch(0.955 0.018 87);
-  --paper-soft: oklch(0.935 0.016 84);
-  --chalk: oklch(0.88 0.07 235);
+  --paper: oklch(1 0 0);
+  --paper-soft: oklch(0.955 0.022 88);
+  --chalk: oklch(0.93 0.035 86);
   --ink: oklch(0.30 0.08 250);
   --rust: oklch(0.575 0.18 36);
   --highlight: oklch(0.83 0.15 91);
