@@ -128,8 +128,8 @@ function Index() {
         <h2 className="mt-5">Suas aulas prontas <span className="text-rust">o ano inteiro</span></h2>
         <p className="mt-4 text-sm text-ink/70">Acesso imediato após a compra. Pagamento único, sem mensalidades.</p>
         <div className="mx-auto mt-10 grid max-w-3xl gap-6 text-left md:grid-cols-2 md:items-start">
-          <Price title="PLANO BÁSICO" old="R$ 27,90" price="12,00" items={["100 atividades de escrita", "100 exercícios", "Propostas de redação", "Materiais de apoio", "Suporte por e-mail", "Acesso vitalício"]} />
-          <Price featured title="KIT COMPLETO" old="R$ 67,90" price="25,90" items={["+2.000 atividades e exercícios", "Atividades de ortografia", "Materiais de linguística", "Produção textual", "Redação e argumentação", "Aprendendo Português na prática", "Slides prontos", "Propostas de redação", "Mapas mentais", "Atividades de interpretação", "Materiais do 6º ano ao Ensino Médio", "Conteúdos para revisão", "Materiais para aulas de emergência", "Atualizações", "Suporte prioritário", "Garantia de 7 dias", "Acesso vitalício"]} />
+          <Price title="PLANO BÁSICO" old="R$ 27,90" price="12,00" href="https://pay.cakto.com.br/iqg5wxe" items={["100 atividades de escrita", "100 exercícios", "Propostas de redação", "Materiais de apoio", "Suporte por e-mail", "Acesso vitalício"]} />
+          <Price featured title="KIT COMPLETO" old="R$ 67,90" price="25,90" href="https://pay.cakto.com.br/33cyvhw_1134156" items={["+2.000 atividades e exercícios", "Atividades de ortografia", "Materiais de linguística", "Produção textual", "Redação e argumentação", "Aprendendo Português na prática", "Slides prontos", "Propostas de redação", "Mapas mentais", "Atividades de interpretação", "Materiais do 6º ano ao Ensino Médio", "Conteúdos para revisão", "Materiais para aulas de emergência", "Atualizações", "Suporte prioritário", "Garantia de 7 dias", "Acesso vitalício"]} />
         </div>
       </section>
 
@@ -160,6 +160,6 @@ function Index() {
   );
 }
 
-function Price({title,old,price,items,featured=false}:{title:string;old:string;price:string;items:string[];featured?:boolean}) {
-  return <article className={`price ${featured ? 'price-featured' : ''}`}>{featured && <span className="popular">MAIS ESCOLHIDO</span>}<span className="price-title">{title}</span><s>de {old}</s><small>por apenas</small><div className="price-number"><sup>R$</sup>{price}</div><small>Pagamento único</small><ul>{items.map(item => <li key={item}><Check size={14}/>{item}</li>)}</ul><a href="#planos" className="cta w-full justify-center">QUERO O {featured ? 'KIT COMPLETO' : 'PLANO BÁSICO'}<ArrowRight size={16}/></a><small className="mt-4 text-center text-ink/55">Compra segura • Acesso por e-mail</small></article>
+function Price({title,old,price,items,featured=false,href}:{title:string;old:string;price:string;items:string[];featured?:boolean;href:string}) {
+  return <article className={`price ${featured ? 'price-featured' : ''}`}>{featured && <span className="popular">MAIS ESCOLHIDO</span>}<span className="price-title">{title}</span><s>de {old}</s><small>por apenas</small><div className="price-number"><sup>R$</sup>{price}</div><small>Pagamento único</small><ul>{items.map(item => <li key={item}><Check size={14}/>{item}</li>)}</ul><a href={href} className="cta w-full justify-center" target="_blank" rel="noopener">QUERO O {featured ? 'KIT COMPLETO' : 'PLANO BÁSICO'}<ArrowRight size={16}/></a><small className="mt-4 text-center text-ink/55">Compra segura • Acesso por e-mail</small></article>
 }
