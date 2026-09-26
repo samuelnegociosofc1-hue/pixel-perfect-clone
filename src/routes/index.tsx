@@ -1,14 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { ArrowRight, Check, FileText, GraduationCap, ShoppingCart, X } from "lucide-react";
-import kitImageAsset from "../assets/kit-redacao-mockup.png.asset.json";
+import kitImageAsset from "../assets/kit-redacao-mockup-v2.png.asset.json";
 import activityImage from "../assets/amostra-atividade.jpg";
 import mapImage from "../assets/amostra-mapa.jpg";
-import benefitActivities from "../assets/beneficio-atividades.jpg";
-import benefitSlides from "../assets/beneficio-slides.jpg";
-import benefitSpelling from "../assets/beneficio-ortografia.jpg";
-import benefitLanguage from "../assets/beneficio-linguistica.jpg";
-import benefitWriting from "../assets/beneficio-producao-textual.jpg";
+import benefitActivities from "../assets/beneficio-atividades-kids.jpg";
+import benefitSlides from "../assets/beneficio-slides-kids.jpg";
+import benefitSpelling from "../assets/beneficio-ortografia-kids.jpg";
+import benefitLanguage from "../assets/beneficio-linguistica-kids.jpg";
+import benefitWriting from "../assets/beneficio-producao-kids.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
