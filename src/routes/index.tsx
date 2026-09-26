@@ -128,8 +128,8 @@ function Index() {
         <h2 className="mt-5">Suas aulas prontas <span className="text-rust">o ano inteiro</span></h2>
         <p className="mt-4 text-sm text-ink/70">Acesso imediato após a compra. Pagamento único, sem mensalidades.</p>
         <div className="mx-auto mt-10 grid max-w-3xl gap-6 text-left md:grid-cols-2 md:items-start">
-          <Price title="PLANO BÁSICO" old="R$ 27,90" price="12,00" items={["100 atividades de escrita", "100 exercícios", "Propostas de redação", "Materiais de apoio", "Suporte por e-mail", "Acesso vitalício"]} />
-          <Price featured title="KIT COMPLETO" old="R$ 67,90" price="25,90" items={["+2.000 atividades e exercícios", "Atividades de ortografia", "Materiais de linguística", "Produção textual", "Redação e argumentação", "Aprendendo Português na prática", "Slides prontos", "Propostas de redação", "Mapas mentais", "Atividades de interpretação", "Materiais do 6º ano ao Ensino Médio", "Conteúdos para revisão", "Materiais para aulas de emergência", "Atualizações", "Suporte prioritário", "Garantia de 7 dias", "Acesso vitalício"]} />
+          <Price title="PLANO BÁSICO" old="R$ 27,90" price="12,00" href="https://pay.cakto.com.br/iqg5wxe" items={["100 atividades de escrita", "100 exercícios", "Propostas de redação", "Materiais de apoio", "Suporte por e-mail", "Acesso vitalício"]} />
+          <Price featured title="KIT COMPLETO" old="R$ 67,90" price="25,90" href="https://pay.cakto.com.br/33cyvhw_1134156" items={["+2.000 atividades e exercícios", "Atividades de ortografia", "Materiais de linguística", "Produção textual", "Redação e argumentação", "Aprendendo Português na prática", "Slides prontos", "Propostas de redação", "Mapas mentais", "Atividades de interpretação", "Materiais do 6º ano ao Ensino Médio", "Conteúdos para revisão", "Materiais para aulas de emergência", "Atualizações", "Suporte prioritário", "Garantia de 7 dias", "Acesso vitalício"]} />
         </div>
       </section>
 
