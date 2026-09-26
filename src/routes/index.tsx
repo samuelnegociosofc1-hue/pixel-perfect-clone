@@ -160,6 +160,6 @@ function Index() {
   );
 }
 
-function Price({title,old,price,items,featured=false}:{title:string;old:string;price:string;items:string[];featured?:boolean}) {
+function Price({title,old,price,items,featured=false,href}:{title:string;old:string;price:string;items:string[];featured?:boolean;href:string}) {
   return <article className={`price ${featured ? 'price-featured' : ''}`}>{featured && <span className="popular">MAIS ESCOLHIDO</span>}<span className="price-title">{title}</span><s>de {old}</s><small>por apenas</small><div className="price-number"><sup>R$</sup>{price}</div><small>Pagamento único</small><ul>{items.map(item => <li key={item}><Check size={14}/>{item}</li>)}</ul><a href="#planos" className="cta w-full justify-center">QUERO O {featured ? 'KIT COMPLETO' : 'PLANO BÁSICO'}<ArrowRight size={16}/></a><small className="mt-4 text-center text-ink/55">Compra segura • Acesso por e-mail</small></article>
 }
