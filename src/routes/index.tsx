@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { ArrowRight, Check, FileText, GraduationCap, ShoppingCart, X } from "lucide-react";
-import kitImage from "../assets/kit-redacao-mockup-clean.png";
+import kitImageAsset from "../assets/kit-redacao-mockup-v2.png.asset.json";
 import activityImage from "../assets/amostra-atividade.jpg";
 import mapImage from "../assets/amostra-mapa.jpg";
 import benefitActivities from "../assets/beneficio-atividades-real.jpg";
@@ -74,7 +74,7 @@ function Index() {
           <h1 className="mt-5 max-w-[19ch] font-serif text-4xl leading-tight md:text-6xl">Sua próxima aula de redação já está <em className="marker">pronta.</em></h1>
           <p className="mt-5 max-w-3xl text-sm font-medium leading-relaxed text-ink/80 md:text-base">+2.000 atividades, exercícios, propostas de redação, slides, materiais práticos e recursos pedagógicos para ensinar redação, escrita, ortografia e comunicação de forma simples, prática e organizada.</p>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/70">Do Ensino Fundamental ao Ensino Médio. Materiais pensados para professores que querem economizar horas de planejamento e ter conteúdo pronto para aplicar em sala de aula.</p>
-          <img src={kitImage} alt="Kit completo de Redação e Produção Textual com cadernos, slides e atividades" width={1264} height={848} className="hero-mockup mt-7 w-full max-w-5xl object-contain" />
+          <img src={kitImageAsset.url} alt="Kit completo de Redação e Produção Textual com cadernos, slides e atividades" width={1143} height={758} className="hero-mockup mt-7 w-full max-w-5xl object-contain" />
           <Cta>QUERO MEU KIT COMPLETO</Cta>
           <small className="mt-4 text-ink/60">Acesso imediato no seu e-mail • Pagamento único</small>
           <div className="mt-10 grid w-full max-w-4xl grid-cols-2 gap-3 md:grid-cols-4">
