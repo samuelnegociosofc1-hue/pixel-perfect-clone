@@ -36,6 +36,9 @@
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); }
 button, a, summary { outline-offset: 4px; }
+/* Oculta completamente o badge "Made with Lovable" */
+a[href*="lovable.dev"] { display: none !important; }
+#lovable-badge, [data-lovable-badge] { display: none !important; }
 
 .chalk-grid { background-image: linear-gradient(color-mix(in oklab,white 45%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in oklab,white 45%,transparent) 1px,transparent 1px); background-size:34px 34px; }
 .stamp { display:inline-block; border:1px solid var(--rust); color:var(--rust); padding:.4rem .7rem; font-family:monospace; font-size:.63rem; font-weight:700; letter-spacing:.12em; transform:rotate(-1deg); }
