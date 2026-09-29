@@ -4,3 +4,4 @@
 - [x] Trocar o mockup principal pela imagem enviada
 - [x] Adicionar novas imagens aos cinco materiais do kit
 - [x] Validar as novas imagens no computador e celular
+- [x] Refinar o mockup atual com textos pequenos mais limpos e validar no topo da página
